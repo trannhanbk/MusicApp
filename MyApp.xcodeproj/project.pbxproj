@@ -1508,7 +1508,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$CI\" == 'true' ]]; then\nexit 0\nfi\nif [[ -s \"${PODS_ROOT}/SwiftLint/swiftlint\" ]]; then\necho 'Linting...'\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\necho 'error: Swiftlint was not installed, please read Readme.md file'\nexit 1\nfi";
+			shellScript = "
+";
 		};
 		EE21B5C9D9AFEDE1C7CC7552 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
