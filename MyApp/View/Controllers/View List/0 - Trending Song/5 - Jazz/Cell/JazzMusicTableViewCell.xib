@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="JazzMusicTableViewCell" customModule="MyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wyj-tb-E8f">
+                        <rect key="frame" x="10" y="24" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="gGA-u7-aVd"/>
+                            <constraint firstAttribute="height" constant="50" id="gxi-Jk-TrA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOt-CL-2dl">
+                        <rect key="frame" x="70" y="37.5" width="319" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="uEu-GB-pWN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gs-Q9-bfM">
+                        <rect key="frame" x="389" y="40" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="KMR-ic-vcf"/>
+                            <constraint firstAttribute="width" constant="20" id="aG3-8x-g4L"/>
+                        </constraints>
+                        <state key="normal" image="icons8-play-property"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wyj-tb-E8f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3jP-dx-soX"/>
+                    <constraint firstAttribute="trailing" secondItem="3gs-Q9-bfM" secondAttribute="trailing" constant="10" id="BN1-uD-KrP"/>
+                    <constraint firstItem="oOt-CL-2dl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GjO-r0-C2A"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oOt-CL-2dl" secondAttribute="trailing" constant="10" id="Xic-jC-e8P"/>
+                    <constraint firstItem="3gs-Q9-bfM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ieM-ua-c3f"/>
+                    <constraint firstItem="oOt-CL-2dl" firstAttribute="leading" secondItem="Wyj-tb-E8f" secondAttribute="trailing" constant="10" id="x1K-5W-GgB"/>
+                    <constraint firstItem="Wyj-tb-E8f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ypm-7K-XhN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageSong" destination="Wyj-tb-E8f" id="GVn-4l-rxV"/>
+                <outlet property="nameSong" destination="oOt-CL-2dl" id="qCf-wB-0A5"/>
+            </connections>
+            <point key="canvasLocation" x="83.5" y="82"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icons8-play-property" width="50" height="50"/>
+    </resources>
+</document>

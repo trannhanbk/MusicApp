@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="MyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTableView" destination="T10-gi-Xru" id="pVh-Zc-LDF"/>
+                <outlet property="searchView" destination="Ner-EF-ND8" id="xFV-fP-bok"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KPOP" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-0p-0et">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-TM-dtl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UiR-No-qmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T10-gi-Xru">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ner-EF-ND8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="hWP-hi-GJ9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="T10-gi-Xru" firstAttribute="leading" secondItem="UiR-No-qmQ" secondAttribute="leading" id="9pq-dM-T98"/>
+                            <constraint firstItem="Ner-EF-ND8" firstAttribute="leading" secondItem="UiR-No-qmQ" secondAttribute="leading" id="AqT-FL-kPz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ner-EF-ND8" secondAttribute="trailing" id="EVc-4c-C2U"/>
+                            <constraint firstItem="T10-gi-Xru" firstAttribute="top" secondItem="Ner-EF-ND8" secondAttribute="bottom" id="WJx-o2-Ylf"/>
+                            <constraint firstItem="Ner-EF-ND8" firstAttribute="top" secondItem="UiR-No-qmQ" secondAttribute="top" id="cjh-Cn-jUX"/>
+                            <constraint firstAttribute="bottom" secondItem="T10-gi-Xru" secondAttribute="bottom" id="lq6-tB-NKR"/>
+                            <constraint firstAttribute="trailing" secondItem="T10-gi-Xru" secondAttribute="trailing" id="s8i-0h-7In"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TEg-0p-0et" firstAttribute="trailing" secondItem="gOj-a7-pS9" secondAttribute="trailing" id="CCy-0v-f69"/>
+                <constraint firstItem="xJJ-TM-dtl" firstAttribute="bottom" secondItem="gOj-a7-pS9" secondAttribute="bottom" id="Cqu-Ic-G0X"/>
+                <constraint firstItem="xJJ-TM-dtl" firstAttribute="leading" secondItem="gOj-a7-pS9" secondAttribute="leading" id="KZ5-jS-i7x"/>
+                <constraint firstItem="TEg-0p-0et" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mc5-V3-m21"/>
+                <constraint firstItem="xJJ-TM-dtl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oyu-ee-wxc"/>
+                <constraint firstItem="xJJ-TM-dtl" firstAttribute="trailing" secondItem="gOj-a7-pS9" secondAttribute="trailing" id="h9e-OJ-aB9"/>
+                <constraint firstItem="TEg-0p-0et" firstAttribute="bottom" secondItem="gOj-a7-pS9" secondAttribute="bottom" id="jbt-w5-u9p"/>
+                <constraint firstItem="TEg-0p-0et" firstAttribute="leading" secondItem="gOj-a7-pS9" secondAttribute="leading" id="xKt-1Q-Aq2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gOj-a7-pS9"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KPOP" width="1330" height="770"/>
+    </resources>
+</document>

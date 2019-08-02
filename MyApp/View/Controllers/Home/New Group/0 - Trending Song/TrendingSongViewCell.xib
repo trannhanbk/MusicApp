@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TrendingSongViewCell" customModule="MyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="147"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="147"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pop " translatesAutoresizingMaskIntoConstraints="NO" id="ncc-lj-0Qu">
+                        <rect key="frame" x="0.0" y="0.0" width="391" height="147"/>
+                    </imageView>
+                    <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkh-kV-n2s" customClass="GradientView" customModule="MyApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="147"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dau tuan nghe gi" translatesAutoresizingMaskIntoConstraints="NO" id="sno-Bt-PRi">
+                        <rect key="frame" x="12" y="65" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="UQf-Do-Exp"/>
+                            <constraint firstAttribute="height" constant="70" id="uMg-IP-MqK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isI-pB-5bl">
+                        <rect key="frame" x="94" y="110" width="278" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="N5F-xT-SKh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adL-w3-PzL">
+                        <rect key="frame" x="357" y="112" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="THY-BD-CMX"/>
+                            <constraint firstAttribute="width" constant="25" id="v5V-W4-wFO"/>
+                        </constraints>
+                        <state key="normal" image="img_play-1"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="adL-w3-PzL" secondAttribute="bottom" constant="10" id="8ua-Pm-gE5"/>
+                <constraint firstAttribute="bottom" secondItem="isI-pB-5bl" secondAttribute="bottom" constant="12" id="9wP-lx-IYU"/>
+                <constraint firstItem="isI-pB-5bl" firstAttribute="leading" secondItem="sno-Bt-PRi" secondAttribute="trailing" constant="12" id="CAt-Ep-PzR"/>
+                <constraint firstItem="pkh-kV-n2s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fyl-Zj-6Xj"/>
+                <constraint firstItem="pkh-kV-n2s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HCT-YU-3vp"/>
+                <constraint firstAttribute="trailing" secondItem="pkh-kV-n2s" secondAttribute="trailing" id="OQg-Fk-br5"/>
+                <constraint firstAttribute="trailing" secondItem="ncc-lj-0Qu" secondAttribute="trailing" constant="1" id="VcV-VM-Oeh"/>
+                <constraint firstAttribute="bottom" secondItem="ncc-lj-0Qu" secondAttribute="bottom" id="Xsn-uV-aTZ"/>
+                <constraint firstAttribute="bottom" secondItem="pkh-kV-n2s" secondAttribute="bottom" id="aWD-ko-rE3"/>
+                <constraint firstAttribute="trailing" secondItem="isI-pB-5bl" secondAttribute="trailing" constant="20" id="dbN-Se-u6j"/>
+                <constraint firstItem="ncc-lj-0Qu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f55-lW-3DD"/>
+                <constraint firstItem="sno-Bt-PRi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="hdp-1V-t8F"/>
+                <constraint firstItem="ncc-lj-0Qu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="khe-ba-PWP"/>
+                <constraint firstAttribute="trailing" secondItem="adL-w3-PzL" secondAttribute="trailing" constant="10" id="pZd-TA-kWa"/>
+                <constraint firstAttribute="bottom" secondItem="sno-Bt-PRi" secondAttribute="bottom" constant="12" id="wRL-aU-CEe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="392" height="147"/>
+            <connections>
+                <outlet property="imageCategorySmall" destination="sno-Bt-PRi" id="zm9-ch-kIa"/>
+                <outlet property="imageCategoryTrending" destination="ncc-lj-0Qu" id="Wht-g7-5Av"/>
+                <outlet property="textlabel" destination="isI-pB-5bl" id="KCT-CF-EvP"/>
+            </connections>
+            <point key="canvasLocation" x="-13" y="102.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dau tuan nghe gi" width="650" height="274"/>
+        <image name="img_play-1" width="134" height="134"/>
+        <image name="pop " width="650" height="274"/>
+    </resources>
+</document>

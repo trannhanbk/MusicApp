@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListCategorySongViewController" customModule="MyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryCollectionView" destination="KZn-SG-TSC" id="Shy-JA-oO2"/>
+                <outlet property="imageBackground" destination="qGH-3i-KO2" id="nhW-Iw-S2D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qGH-3i-KO2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RS-OM-hgv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qtf-yw-AxT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-SG-TSC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eux-8R-0K2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KZn-SG-TSC" firstAttribute="top" secondItem="Qtf-yw-AxT" secondAttribute="top" id="EBz-1N-auV"/>
+                            <constraint firstItem="KZn-SG-TSC" firstAttribute="leading" secondItem="Qtf-yw-AxT" secondAttribute="leading" id="Vsw-75-ph4"/>
+                            <constraint firstAttribute="bottom" secondItem="KZn-SG-TSC" secondAttribute="bottom" id="ux9-Ux-pL4"/>
+                            <constraint firstAttribute="trailing" secondItem="KZn-SG-TSC" secondAttribute="trailing" id="wvv-cu-7Dh"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5RS-OM-hgv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0th-r2-Wwt"/>
+                <constraint firstItem="qGH-3i-KO2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Arj-up-JEC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qGH-3i-KO2" secondAttribute="bottom" id="Egp-RJ-IxE"/>
+                <constraint firstAttribute="trailing" secondItem="qGH-3i-KO2" secondAttribute="trailing" id="Rwv-Aq-phv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5RS-OM-hgv" secondAttribute="bottom" id="SDx-uT-1OP"/>
+                <constraint firstItem="qGH-3i-KO2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WL8-Vk-uCd"/>
+                <constraint firstItem="5RS-OM-hgv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hbM-qO-7hP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5RS-OM-hgv" secondAttribute="trailing" id="wJv-sz-hxV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
