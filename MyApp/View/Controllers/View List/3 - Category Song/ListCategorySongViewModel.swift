@@ -24,7 +24,7 @@ class ListCategorySongViewModel {
 
     func loadData(completion: @escaping Completion) {
         let prameters = Api.Trending.Attribute(country: "VN",
-                                               limit: 40,
+                                               limit: 50,
                                                offset: 5)
         Api.Trending.Attribute.feeDataTrendingSongEDM(parameters: prameters) { [weak self] (result) in
             guard let this = self else { return }
