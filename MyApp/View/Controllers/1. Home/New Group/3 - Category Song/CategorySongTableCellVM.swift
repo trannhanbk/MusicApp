@@ -30,7 +30,7 @@ class CategorySongTableCellVM {
 
     func loadDataCategorySong(completion: @escaping Completion6) {
         let prameters = Api.Trending.Attribute(country: "VN",
-                                               limit: 7,
+                                               limit: 20,
                                                offset: 5)
         Api.Trending.Attribute.feeDataTrendingSongEDM(parameters: prameters) { [weak self] (result) in
             guard let this = self else { return }
