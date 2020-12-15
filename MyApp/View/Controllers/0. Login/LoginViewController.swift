@@ -11,15 +11,17 @@ import SafariServices
 import AVFoundation
 import SVProgressHUD
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
+    @IBOutlet weak var imageLoginView: UIImageView!
+    @IBOutlet weak var loginButton: UIButton!
+    
     // Variables
     var auth = SPTAuth.defaultInstance()
     var session: SPTSession!
     var player: SPTAudioStreamingController?
     var loginUrl: URL?
-    @IBOutlet weak var imageLoginView: UIImageView!
-    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

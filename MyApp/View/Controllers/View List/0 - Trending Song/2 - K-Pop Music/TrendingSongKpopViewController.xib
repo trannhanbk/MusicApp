@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,20 +18,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workout_music" translatesAutoresizingMaskIntoConstraints="NO" id="4jS-VX-nVw">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeS-65-hmy">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fLP-eY-OrL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmI-B9-bYG" customClass="GradientView" customModule="MyApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="fpd-AM-bgU"/>
@@ -48,13 +46,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65m-i4-QFm">
-                                <rect key="frame" x="50" y="10" width="275" height="50"/>
+                                <rect key="frame" x="50" y="10" width="314" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-dl-rQO">
-                                <rect key="frame" x="87" y="91" width="200" height="25"/>
+                                <rect key="frame" x="107" y="91" width="200" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="hXh-Yi-ruH"/>
                                     <constraint firstAttribute="height" constant="25" id="ydU-mH-Dp8"/>
@@ -64,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eVV-6v-x1C">
-                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                                <rect key="frame" x="0.0" y="71" width="414" height="747"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -101,18 +99,18 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4jS-VX-nVw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8I2-F1-sCY"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="M9l-wA-Km7"/>
-                <constraint firstItem="ZeS-65-hmy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZPc-ZE-XfR"/>
+                <constraint firstItem="ZeS-65-hmy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZPc-ZE-XfR"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="gdg-25-BAp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4jS-VX-nVw" secondAttribute="bottom" id="lTz-0a-mUX"/>
-                <constraint firstItem="4jS-VX-nVw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pMa-N1-hkZ"/>
+                <constraint firstItem="4jS-VX-nVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pMa-N1-hkZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4jS-VX-nVw" secondAttribute="trailing" id="rZZ-Nt-EYs"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rxq-f7-UKq"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>

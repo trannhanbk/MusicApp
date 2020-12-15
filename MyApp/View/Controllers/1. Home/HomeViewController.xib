@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,18 +23,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q7D-x1-mUi">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="742"/>
                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lE3-9P-eWO">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="742"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ytb-2p-Wj1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="742"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2C5-iD-CYd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="742"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="rJv-Rc-bLM">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,7 +50,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="qMs-G9-iZi">
-                                    <rect key="frame" x="0.0" y="1096.5" width="375" height="1000"/>
+                                    <rect key="frame" x="0.0" y="968" width="375" height="1000"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pH-pzs">
@@ -98,11 +96,12 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lE3-9P-eWO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5d4-kw-Ljp"/>
-                <constraint firstItem="q7D-x1-mUi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AtY-26-AYe"/>
-                <constraint firstItem="lE3-9P-eWO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QK0-yM-Oac"/>
+                <constraint firstItem="q7D-x1-mUi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AtY-26-AYe"/>
+                <constraint firstItem="lE3-9P-eWO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QK0-yM-Oac"/>
                 <constraint firstItem="q7D-x1-mUi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SmV-3s-WPD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lE3-9P-eWO" secondAttribute="bottom" id="UTn-lh-oIL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="q7D-x1-mUi" secondAttribute="bottom" id="Y1E-lZ-Z2q"/>
@@ -110,7 +109,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q7D-x1-mUi" secondAttribute="trailing" id="lwn-02-k7w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="185.5" y="82"/>
         </view>
         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="cTH-XZ-BZ1">
@@ -119,4 +117,9 @@
             <point key="canvasLocation" x="-252" y="404"/>
         </activityIndicatorView>
     </objects>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,16 +18,16 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nhan-gui-thanh-xuan" translatesAutoresizingMaskIntoConstraints="NO" id="4jS-VX-nVw">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                 </imageView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeS-65-hmy">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fLP-eY-OrL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l4-fY-3Hw" customClass="GradientView" customModule="MyApp" customModuleProvider="target">
@@ -48,7 +46,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Music" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65m-i4-QFm">
-                                <rect key="frame" x="60" y="22.5" width="255" height="25"/>
+                                <rect key="frame" x="60" y="22.666666666666671" width="255" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="0jC-b5-7Ab"/>
                                     <constraint firstAttribute="width" constant="255" id="ff4-I4-t0a"/>
@@ -58,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eVV-6v-x1C">
-                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                                <rect key="frame" x="0.0" y="71" width="375" height="663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -92,7 +90,7 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd2-7g-dBk">
-                    <rect key="frame" x="300" y="592" width="60" height="60"/>
+                    <rect key="frame" x="300" y="703" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="3PW-DO-q9x"/>
                         <constraint firstAttribute="height" constant="60" id="8aa-da-WBy"/>
@@ -103,20 +101,20 @@
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4jS-VX-nVw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4IM-FN-CGG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Nd2-7g-dBk" secondAttribute="bottom" constant="15" id="8gK-Ef-yOq"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="EtB-rz-nya"/>
                 <constraint firstItem="4jS-VX-nVw" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="STd-83-cNL"/>
-                <constraint firstItem="4jS-VX-nVw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="StI-hb-w5Q"/>
+                <constraint firstItem="4jS-VX-nVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="StI-hb-w5Q"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uy0-z4-Vjy"/>
                 <constraint firstItem="ZeS-65-hmy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="cI5-os-f9H"/>
-                <constraint firstItem="ZeS-65-hmy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k6w-fa-ymN"/>
+                <constraint firstItem="ZeS-65-hmy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k6w-fa-ymN"/>
                 <constraint firstItem="4jS-VX-nVw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="n7K-Ge-KjA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nd2-7g-dBk" secondAttribute="trailing" constant="15" id="paE-2X-yT9"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>

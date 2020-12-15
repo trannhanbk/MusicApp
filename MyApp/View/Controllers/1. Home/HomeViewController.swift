@@ -25,7 +25,6 @@ class HomeViewController: BaseViewController {
         configNavigation()
         configCollectionView()
         configTableViewCell()
-//        view.addSubview(addCurrentView())
         homeTableView.backgroundColor = UIColor.clear
         refresh()
         NotificationCenter.default.addObserver(self,
