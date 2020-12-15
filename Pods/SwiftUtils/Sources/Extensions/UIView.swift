@@ -29,10 +29,10 @@ extension UIView {
 
 // MARK: Appearance
 extension UIView {
-    public func clear() {
+    public func clearSubViews() {
         backgroundColor = UIColor.clear
         for sub in subviews {
-            sub.clear()
+            sub.clearSubViews()
         }
     }
 

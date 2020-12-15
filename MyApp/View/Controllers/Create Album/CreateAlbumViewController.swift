@@ -93,7 +93,7 @@ extension CreateAlbumViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         viewModel.editingStyle(tableViewMyAlbum, commit: editingStyle, forRowAt: indexPath)
     }
 }

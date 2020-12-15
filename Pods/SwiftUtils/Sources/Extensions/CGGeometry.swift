@@ -247,31 +247,31 @@ extension CGRect {
 }
 
 public func + (lhs: CGRect, rhs: CGPoint) -> CGRect {
-    let b = CGPoint(x: lhs.origin.x + rhs.x, y: lhs.origin.y + rhs.y)
-    return CGRect(origin: b, size: lhs.size)
+    let origin = CGPoint(x: lhs.origin.x + rhs.x, y: lhs.origin.y + rhs.y)
+    return CGRect(origin: origin, size: lhs.size)
 }
 
 public func + (lhs: CGRect, rhs: CGVector) -> CGRect {
-    let b = CGPoint(x: lhs.origin.x + rhs.dx, y: lhs.origin.y + rhs.dy)
-    return CGRect(origin: b, size: lhs.size)
+    let origin = CGPoint(x: lhs.origin.x + rhs.dx, y: lhs.origin.y + rhs.dy)
+    return CGRect(origin: origin, size: lhs.size)
 }
 
 public func + (lhs: CGRect, rhs: CGSize) -> CGRect {
-    let s = CGSize(width: lhs.size.width + rhs.width, height: lhs.size.height + rhs.height)
-    return CGRect(origin: lhs.origin, size: s)
+    let size = CGSize(width: lhs.size.width + rhs.width, height: lhs.size.height + rhs.height)
+    return CGRect(origin: lhs.origin, size: size)
 }
 
 public func - (lhs: CGRect, rhs: CGPoint) -> CGRect {
-    let b = CGPoint(x: lhs.origin.x - rhs.x, y: lhs.origin.y - rhs.y)
-    return CGRect(origin: b, size: lhs.size)
+    let origin = CGPoint(x: lhs.origin.x - rhs.x, y: lhs.origin.y - rhs.y)
+    return CGRect(origin: origin, size: lhs.size)
 }
 
 public func - (lhs: CGRect, rhs: CGVector) -> CGRect {
-    let b = CGPoint(x: lhs.origin.x - rhs.dx, y: lhs.origin.y - rhs.dy)
-    return CGRect(origin: b, size: lhs.size)
+    let origin = CGPoint(x: lhs.origin.x - rhs.dx, y: lhs.origin.y - rhs.dy)
+    return CGRect(origin: origin, size: lhs.size)
 }
 
 public func - (lhs: CGRect, rhs: CGSize) -> CGRect {
-    let s = CGSize(width: lhs.size.width - rhs.width, height: lhs.size.height - rhs.height)
-    return CGRect(origin: lhs.origin, size: s)
+    let size = CGSize(width: lhs.size.width - rhs.width, height: lhs.size.height - rhs.height)
+    return CGRect(origin: lhs.origin, size: size)
 }

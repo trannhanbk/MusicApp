@@ -10,7 +10,7 @@ import Foundation
 
 extension Float {
     public var abs: Float {
-        return Foundation.fabs(self)
+        return Foundation.fabsf(self)
     }
 
     public var sqrt: Float {

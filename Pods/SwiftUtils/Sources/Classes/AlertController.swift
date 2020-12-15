@@ -24,7 +24,7 @@ open class AlertController: UIAlertController, AlertLevelProtocol {
 
     open var level = AlertLevel.normal
 
-    open func addAction(_ title: String?, style: UIAlertActionStyle = UIAlertActionStyle.default, handler: (() -> Void)? = nil) {
+    open func addAction(_ title: String?, style: UIAlertAction.Style = UIAlertAction.Style.default, handler: (() -> Void)? = nil) {
         let actionHandler: ((UIAlertAction) -> Void)? = handler != nil ? { (action: UIAlertAction) -> Void in
             handler?()
         }: nil

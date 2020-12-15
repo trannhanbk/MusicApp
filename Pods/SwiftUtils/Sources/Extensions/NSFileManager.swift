@@ -50,13 +50,13 @@ extension FileManager {
     }
 
     public class func skipBackup(_ path: String) -> Bool {
-        let fm = `default`
+        let fileManager = `default`
         var isDir: ObjCBool = true
-        if fm.fileExists(atPath: path, isDirectory: &isDir) {
+        if fileManager.fileExists(atPath: path, isDirectory: &isDir) {
             if isDir.boolValue {
                 var success = true
                 do {
-                    let urls = try fm.contentsOfDirectory(atPath: path)
+                    let urls = try fileManager.contentsOfDirectory(atPath: path)
                     for url in urls {
                         success = success && skipBackup(url)
                     }

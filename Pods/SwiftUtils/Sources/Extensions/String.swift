@@ -214,7 +214,7 @@ extension Character {
 }
 
 extension NSMutableAttributedString {
-    public func append(string: String, attributes: [NSAttributedStringKey: Any]) {
+    public func append(string: String, attributes: [NSAttributedString.Key: Any]) {
         let str = NSMutableAttributedString(string: string, attributes: attributes)
         append(str)
     }

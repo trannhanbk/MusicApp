@@ -103,15 +103,14 @@ class HomeViewModel {
         return item.title
     }
 
-    func cellForItemAtCategory1(at indexPath: IndexPath) -> HomeCellTrendingSongViewModel {
+    func cellForItemAtCategory1(at indexPath: IndexPath) -> TrendingSongCellViewModel {
         let row = indexPath.row
         let name = categoriesTrendingSong[row].name
         let image = categoriesTrendingSong[row].image
-        return HomeCellTrendingSongViewModel(imageCategory: image, imageCategorySmall: image, nameCategory: name)
+        return TrendingSongCellViewModel(imageCategory: image, imageCategorySmall: image, nameCategory: name)
     }
 
     // Like Song
-
     enum Result {
         case success
         case failure(Error)

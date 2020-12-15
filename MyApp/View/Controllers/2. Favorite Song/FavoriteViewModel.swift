@@ -27,14 +27,14 @@ final class FavoriteSongViewModel: Object {
         return FavoriteCellVM(item: item[indexPath.row])
     }
 
-    func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+    func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
             do {
                 let realm = try Realm()
                 try realm.write {
                     let itemFavorite = realm.objects(FavoriteSong.self)[indexPath.row]
                     realm.delete(itemFavorite)
-                    tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
                 }
             } catch {
                 print("Not delete")

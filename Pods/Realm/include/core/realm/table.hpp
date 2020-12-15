@@ -394,7 +394,8 @@ public:
 
     size_t add_empty_row(size_t num_rows = 1);
     void insert_empty_row(size_t row_ndx, size_t num_rows = 1);
-    size_t add_row_with_key(size_t col_ndx, int64_t key);
+    size_t add_row_with_key(size_t col_ndx, util::Optional<int64_t> key);
+    size_t add_row_with_keys(size_t col_1_ndx, int64_t key1, size_t col_2_ndx, StringData key2);
     void remove(size_t row_ndx);
     void remove_recursive(size_t row_ndx);
     void remove_last();
@@ -1269,6 +1270,7 @@ private:
 
     void bind_ptr() const noexcept;
     void unbind_ptr() const noexcept;
+    bool has_references() const noexcept;
 
     void register_view(const TableViewBase* view);
     void unregister_view(const TableViewBase* view) noexcept;
@@ -1737,6 +1739,11 @@ inline void Table::unbind_ptr() const noexcept
     else {
         delete this;
     }
+}
+
+inline bool Table::has_references() const noexcept
+{
+    return m_ref_count.load() > 0;
 }
 
 inline void Table::register_view(const TableViewBase* view)
@@ -2786,6 +2793,11 @@ public:
     static void unregister_view(Table& table, const TableViewBase* view) noexcept
     {
         table.unregister_view(view);
+    }
+
+    static bool has_references(const Table& table) noexcept
+    {
+        return table.has_references();
     }
 };
 

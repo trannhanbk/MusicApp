@@ -12,7 +12,9 @@ import AVFoundation
 import SDWebImage
 import RealmSwift
 
-class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate {
+class ScreenPlayerSongViewController: UIViewController,
+                                      SPTAudioStreamingDelegate,
+                                      SPTAudioStreamingPlaybackDelegate {
 
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
@@ -67,7 +69,7 @@ class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegat
     }
 
     func activateAudioSession() {
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try? AVAudioSession.sharedInstance().setActive(true)
     }
 
@@ -78,7 +80,7 @@ class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegat
 
     func setUpScreen() {
         let thumbImg = #imageLiteral(resourceName: "circle_y")
-        progressSlider.setThumbImage(thumbImg, for: UIControlState())
+        progressSlider.setThumbImage(thumbImg, for: UIControl.State())
         progressSlider.value = 0
         imageView.layer.cornerRadius = imageView.bounds.width / 2
         imageView.clipsToBounds = true
@@ -192,7 +194,7 @@ class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegat
     }
 
     func addAlbum() {
-        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want add this song to my album?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want add this song to my album?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style {
             case .default:
@@ -209,7 +211,7 @@ class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegat
     }
 
     func addFavorite() {
-        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want add this song to favorite playlist?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want add this song to favorite playlist?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style {
             case .default:
@@ -234,7 +236,7 @@ class ScreenPlayerSongViewController: UIViewController, SPTAudioStreamingDelegat
         nameSong.text = self.player?.metadata.currentTrack?.name
         singerSong.text = self.player?.metadata.currentTrack?.artistName
         if let urlThumb = self.player?.metadata.currentTrack?.albumCoverArtURL {
-            imageView.sd_setImage(with: URL(string: urlThumb))
+//            imageView.sd_setImage(with: URL(string: urlThumb))
             imageBackgound.sd_setImage(with: URL(string: urlThumb))
         }
     }

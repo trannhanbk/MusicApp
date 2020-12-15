@@ -14,26 +14,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var auth = SPTAuth()
+    
+    static let shared: AppDelegate = {
+        guard let shared = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Cannot cast `UIApplication.shared.delegate` to `AppDelegate`.")
+        }
+        return shared
+    }()
+    
+    enum AppState {
+        case login
+        case openApp
+    }
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        configWindow()
+        return true
+    }
+    
+    func configWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        gotoLogin()
         window?.makeKeyAndVisible()
         auth.redirectURL = URL(string: "MyApp://returnAfterLogin") // insert your redirect URL here
         auth.sessionUserDefaultsKey = "current session"
-        return true
+        if api.session.isAuthenticated {
+            changeRootWithState(state: .openApp)
+        } else {
+            changeRootWithState(state: .login)
+        }
     }
 
-    func gotoLogin() {
-        let navi = LoginViewController()
-        let navigationController = UINavigationController(rootViewController: navi)
-        let sideMenuController = LGSideMenuController(rootViewController: navigationController)
-        sideMenuController.leftViewController = MenuViewController()
-        sideMenuController.leftViewWidth = 3 * UIScreen.main.bounds.width / 4
-        sideMenuController.leftViewPresentationStyle = .slideBelow
-        window?.rootViewController = sideMenuController
+    func changeRootWithState(state: AppState) {
+        switch state {
+        case .login:
+            let loginVC = LoginViewController()
+            window?.rootViewController = loginVC
+        case .openApp:
+            let homeVC = HomeViewController()
+            let naviVC = UINavigationController(rootViewController: homeVC)
+            let sideMenu = LGSideMenuController(rootViewController: naviVC)
+            sideMenu.leftViewController = MenuViewController()
+            sideMenu.leftViewWidth = 3 * UIScreen.main.bounds.width / 4
+            sideMenu.leftViewPresentationStyle = .slideBelow
+            window?.rootViewController = sideMenu
+        }
     }
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -42,7 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if error != nil {
                     print("error!")
                 }
-                UserDefaults.standard.set(session?.accessToken, forKey: "kAccessToken")
+                guard let accessToken = session?.accessToken else { return }
+                api.session.accessToken = accessToken
                 let userDefaults = UserDefaults.standard
                 let sessionData = NSKeyedArchiver.archivedData(withRootObject: session ?? "")
                 print(sessionData)

@@ -35,8 +35,8 @@ extension UITableView {
         let offset = contentOffset.y
         scrollToRow(at: path, at: .top, animated: animated)
         let delay = (animated ? 0.2 : 0.0) * Double(NSEC_PER_SEC)
-        let t = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: t, execute: { () -> Void in
+        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: { () -> Void in
             if self.contentOffset.y != offset {
                 self.scrollsToBottom(false)
             }
