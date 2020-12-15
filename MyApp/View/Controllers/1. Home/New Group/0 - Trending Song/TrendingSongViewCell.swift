@@ -14,7 +14,7 @@ class TrendingSongViewCell: UICollectionViewCell {
     @IBOutlet var imageCategorySmall: UIImageView!
     @IBOutlet private weak var imageCategoryTrending: UIImageView!
     @IBOutlet private weak var textlabel: UILabel!
-    var viewModel: HomeCellTrendingSongViewModel? {
+    var viewModel: TrendingSongCellViewModel? {
         didSet {
             updateView()
         }

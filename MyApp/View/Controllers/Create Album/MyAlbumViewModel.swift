@@ -27,14 +27,14 @@ class MyAlbumViewModel {
         return MyAlbumCellViewModel(item: item[indexPath.row])
     }
 
-    func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+    func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
             do {
                 let realm = try Realm()
                 try realm.write {
                     let itemAlbum = realm.objects(MyAlbum.self)[indexPath.row]
                     realm.delete(itemAlbum)
-                    tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
                 }
             } catch {
                 print("Not delete")

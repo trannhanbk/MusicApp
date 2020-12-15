@@ -42,10 +42,8 @@ class LoginViewController: UIViewController {
             let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as? SPTSession
             self.session = firstTimeSession
             self.loginButton.isHidden = true
-            UserDefaults.standard.set(self.session.accessToken, forKey: "kAccessToken")
-            let home = HomeViewController()
-            navigationController?.isNavigationBarHidden = false
-            navigationController?.pushViewController(home, animated: true)
+            api.session.accessToken = session.accessToken
+            AppDelegate.shared.changeRootWithState(state: .openApp)
         }
     }
 

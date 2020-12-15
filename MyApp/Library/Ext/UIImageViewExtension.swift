@@ -41,7 +41,7 @@ extension UIImageView {
             rotateAnimation.toValue = Double.pi * 2
             rotateAnimation.duration = 13
             rotateAnimation.repeatCount = HUGE
-            rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            rotateAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
             self.layer.speed = 1
             self.layer.add(rotateAnimation, forKey: "cdImage")
         }

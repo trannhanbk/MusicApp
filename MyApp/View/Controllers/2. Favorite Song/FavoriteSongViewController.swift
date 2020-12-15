@@ -23,7 +23,7 @@ class FavoriteSongViewController: UIViewController {
     }
 
     @IBAction func deleteCellButton(_ sender: Any) {
-        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want delete all song in favorite playlist?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "★★★★★ HELLO ★★★★★", message: "Do you want delete all song in favorite playlist?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style {
             case .default:
@@ -85,7 +85,7 @@ extension FavoriteSongViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         viewModel.editingStyle(tableViewFavorite, commit: editingStyle, forRowAt: indexPath)
     }
 }

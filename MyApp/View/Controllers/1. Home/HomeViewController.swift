@@ -180,7 +180,8 @@ class HomeViewController: BaseViewController {
 
     private func setTimer() {
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(scrollInterval), target: self, selector: #selector(autoScrollImageSlider), userInfo: nil, repeats: true)
-        RunLoop.main.add(self.timer, forMode: .commonModes)
+//        RunLoop.main.add(self.timer, forMode: .RunLoop.Mode.common)
+        RunLoop.main.add(self.timer, forMode: .common)
     }
 
     @objc private func autoScrollImageSlider() {

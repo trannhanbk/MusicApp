@@ -15,6 +15,17 @@ enum Process {
 }
 
 extension String {
+    func date(withFormat format: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 32_400)
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)
+    }
+
+    var isNotEmpty: Bool {
+        return !isEmpty
+    }
 
     var trimmed: String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

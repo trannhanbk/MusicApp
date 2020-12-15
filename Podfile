@@ -4,12 +4,13 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'MyApp' do
-   pod 'ObjectMapper', '3.5.1'
+   pod 'ObjectMapper'
    pod 'SwiftLint', '~> 0.18.1'
    pod 'LGSideMenuController'
-   pod 'AlamofireObjectMapper', '5.0.0'
-   pod 'SwiftUtils', '~> 4.0'
+   pod 'AlamofireObjectMapper'
+   pod 'SwiftUtils'
    pod 'SDWebImage'
-   pod 'RealmSwift', '~> 3.0'
+   pod 'RealmSwift'
    pod 'SVProgressHUD', '~> 2.2.2'
 end
+
