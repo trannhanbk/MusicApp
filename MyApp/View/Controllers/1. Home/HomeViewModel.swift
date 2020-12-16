@@ -103,11 +103,11 @@ class HomeViewModel {
         return item.title
     }
 
-    func cellForItemAtCategory1(at indexPath: IndexPath) -> TrendingSongCellViewModel {
+    func cellForItemAtCategory1(at indexPath: IndexPath) -> TrendingCellVM {
         let row = indexPath.row
         let name = categoriesTrendingSong[row].name
         let image = categoriesTrendingSong[row].image
-        return TrendingSongCellViewModel(imageCategory: image, imageCategorySmall: image, nameCategory: name)
+        return TrendingCellVM(imageCategory: image, imageCategorySmall: image, nameCategory: name)
     }
 
     // Like Song

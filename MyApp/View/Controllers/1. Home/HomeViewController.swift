@@ -68,8 +68,8 @@ class HomeViewController: BaseViewController {
     }
 
     private func configCollectionCellFooter() {
-        let nib = UINib(nibName: "AlbumHotItem", bundle: Bundle.main)
-        collectionViewAlbumHot.register(nib, forCellWithReuseIdentifier: "AlbumHotItem")
+        let nib = UINib(nibName: "AlbumHotCell", bundle: Bundle.main)
+        collectionViewAlbumHot.register(nib, forCellWithReuseIdentifier: "AlbumHotCell")
         collectionViewAlbumHot.delegate = self
         collectionViewAlbumHot.dataSource = self
         collectionViewAlbumHot.backgroundColor = UIColor.clear
@@ -245,14 +245,14 @@ extension HomeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionViewTrendingSong {
-            guard let cell = collectionViewTrendingSong.dequeueReusableCell(withReuseIdentifier: App.String.nibName, for: indexPath) as? TrendingSongViewCell else {
+            guard let cell = collectionViewTrendingSong.dequeueReusableCell(withReuseIdentifier: App.String.nibName, for: indexPath) as? TrendingCell else {
                 fatalError()
             }
             cell.backgroundColor = UIColor.clear
             cell.viewModel = viewModel.cellForItemAtCategory1(at: indexPath)
             return cell
         } else {
-            guard let cell = collectionViewAlbumHot.dequeueReusableCell(withReuseIdentifier: "AlbumHotItem", for: indexPath) as? AlbumHotItem else { fatalError() }
+            guard let cell = collectionViewAlbumHot.dequeueReusableCell(withReuseIdentifier: "AlbumHotCell", for: indexPath) as? AlbumHotCell else { fatalError() }
             cell.backgroundColor = UIColor.clear
             cell.viewModel = viewModel.cellForRowAtAlbumHot(at: indexPath)
             return cell

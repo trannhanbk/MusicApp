@@ -16,6 +16,7 @@ class SongEveryDayTableViewCell: UITableViewCell {
     @IBOutlet weak var imageSongEveryDay: UIImageView!
     @IBOutlet weak var imageSongSmall: UIImageView!
     @IBOutlet weak var nameSongEveryDay: UILabel!
+
     var viewModel: SongEveryDayCellViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }

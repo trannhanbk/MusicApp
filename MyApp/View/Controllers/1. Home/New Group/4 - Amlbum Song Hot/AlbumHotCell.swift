@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumHotItem: UICollectionViewCell {
+class AlbumHotCell: UICollectionViewCell {
 
     @IBOutlet weak var nameSinger: UILabel!
     @IBOutlet weak var titleAlbum: UILabel!

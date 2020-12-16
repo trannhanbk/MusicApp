@@ -9,12 +9,12 @@
 import UIKit
 import SDWebImage
 
-class TrendingSongViewCell: UICollectionViewCell {
+class TrendingCell: UICollectionViewCell {
 
     @IBOutlet var imageCategorySmall: UIImageView!
     @IBOutlet private weak var imageCategoryTrending: UIImageView!
     @IBOutlet private weak var textlabel: UILabel!
-    var viewModel: TrendingSongCellViewModel? {
+    var viewModel: TrendingCellVM? {
         didSet {
             updateView()
         }

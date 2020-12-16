@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrendingSongCellViewModel {
+class TrendingCellVM {
     var imageCategory: UIImage?
     var imageCategorySmall: UIImage?
     var nameCategory: String?
