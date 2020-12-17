@@ -12,5 +12,6 @@ target 'MyApp' do
    pod 'SDWebImage'
    pod 'RealmSwift'
    pod 'SVProgressHUD', '~> 2.2.2'
+   pod 'SwifterSwift', '4.6.0'
 end
 

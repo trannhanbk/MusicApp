@@ -14,6 +14,23 @@ PODS:
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
   - SVProgressHUD (2.2.5)
+  - SwifterSwift (4.6.0):
+    - SwifterSwift/AppKit (= 4.6.0)
+    - SwifterSwift/CoreGraphics (= 4.6.0)
+    - SwifterSwift/CoreLocation (= 4.6.0)
+    - SwifterSwift/Foundation (= 4.6.0)
+    - SwifterSwift/MapKit (= 4.6.0)
+    - SwifterSwift/SpriteKit (= 4.6.0)
+    - SwifterSwift/SwiftStdlib (= 4.6.0)
+    - SwifterSwift/UIKit (= 4.6.0)
+  - SwifterSwift/AppKit (4.6.0)
+  - SwifterSwift/CoreGraphics (4.6.0)
+  - SwifterSwift/CoreLocation (4.6.0)
+  - SwifterSwift/Foundation (4.6.0)
+  - SwifterSwift/MapKit (4.6.0)
+  - SwifterSwift/SpriteKit (4.6.0)
+  - SwifterSwift/SwiftStdlib (4.6.0)
+  - SwifterSwift/UIKit (4.6.0)
   - SwiftLint (0.18.1)
   - SwiftUtils (4.2.1)
 
@@ -24,6 +41,7 @@ DEPENDENCIES:
   - RealmSwift
   - SDWebImage
   - SVProgressHUD (~> 2.2.2)
+  - SwifterSwift (= 4.6.0)
   - SwiftLint (~> 0.18.1)
   - SwiftUtils
 
@@ -37,6 +55,7 @@ SPEC REPOS:
     - RealmSwift
     - SDWebImage
     - SVProgressHUD
+    - SwifterSwift
     - SwiftLint
     - SwiftUtils
 
@@ -49,9 +68,10 @@ SPEC CHECKSUMS:
   RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
   SwiftUtils: fa346feeac5a25eab7ea5d59f1857c6253cb8ab1
 
-PODFILE CHECKSUM: 10faca4714405f7be7d8bdc951bf2adc06f5db44
+PODFILE CHECKSUM: 9f422aa5d5f733195fd452410df397ab18443d25
 
 COCOAPODS: 1.10.0

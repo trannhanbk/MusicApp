@@ -26,7 +26,7 @@ class CreateAlbumViewModel {
     func cellForRowAtListMyAlbum(at indexPath: IndexPath) -> MyAlbumCellVM {
         return MyAlbumCellVM(item: item[indexPath.row])
     }
-
+ 
     func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             do {
@@ -36,7 +36,7 @@ class CreateAlbumViewModel {
                     realm.delete(itemAlbum)
                     tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
                 }
-            } catch {
+            } catch { 
                 print("Not delete")
             }
         }

@@ -75,8 +75,7 @@ final class PlayerViewController: UIViewController, SPTAudioStreamingDelegate, S
     }
 
     func setUpScreen() {
-        let thumbImg = #imageLiteral(resourceName: "circle_y")
-        progressSlider.setThumbImage(thumbImg, for: UIControl.State())
+        progressSlider.setThumbImage(#imageLiteral(resourceName: "circle_y"), for: .normal)
         progressSlider.value = 0
         imageView.layer.cornerRadius = imageView.bounds.width / 2
         imageView.clipsToBounds = true
@@ -137,9 +136,9 @@ final class PlayerViewController: UIViewController, SPTAudioStreamingDelegate, S
     }
 
     @IBAction func nextButton(_ sender: Any) {
-        self.player?.skipNext(nil)
-        self.actionPlaySong(!isPlaying)
-        self.favoriteButton.setImage(#imageLiteral(resourceName: "ic_favorite_white_48dp"), for: .normal)
+        player?.skipNext(nil)
+        actionPlaySong(!isPlaying)
+        favoriteButton.setImage(#imageLiteral(resourceName: "ic_favorite_white_48dp"), for: .normal)
         guard let positionMax = viewModel?.dataPlays.count else { return }
         position += 1
         if position >= positionMax {
@@ -151,9 +150,9 @@ final class PlayerViewController: UIViewController, SPTAudioStreamingDelegate, S
     }
 
     @IBAction func backButton(_ sender: Any) {
-        self.player?.skipPrevious(nil)
-        self.actionPlaySong(!isPlaying)
-        self.favoriteButton.setImage(#imageLiteral(resourceName: "ic_favorite_white_48dp"), for: .normal)
+        player?.skipPrevious(nil)
+        actionPlaySong(!isPlaying)
+        favoriteButton.setImage(#imageLiteral(resourceName: "ic_favorite_white_48dp"), for: .normal)
         guard let positionMax = viewModel?.dataPlays.count else { return }
         print(positionMax)
         position += 1
