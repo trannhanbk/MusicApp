@@ -52,13 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginVC = LoginViewController()
             window?.rootViewController = loginVC
         case .openApp:
-            let homeVC = HomeViewController()
-            let naviVC = UINavigationController(rootViewController: homeVC)
-            let sideMenu = LGSideMenuController(rootViewController: naviVC)
-            sideMenu.leftViewController = MenuViewController()
-            sideMenu.leftViewWidth = 3 * UIScreen.main.bounds.width / 4
-            sideMenu.leftViewPresentationStyle = .slideBelow
-            window?.rootViewController = sideMenu
+            window?.rootViewController = TabbarViewController()
         }
     }
 

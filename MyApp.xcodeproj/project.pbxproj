@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D2E3F2A25889B45007EC7E3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E3F2925889B44007EC7E3 /* Session.swift */; };
 		3D91A32F258B08A60050D573 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91A32E258B08A60050D573 /* TabbarViewController.swift */; };
+		3D91A341258B099B0050D573 /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91A340258B099B0050D573 /* Radio.swift */; };
+		3D91A345258B0A0B0050D573 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91A344258B0A0B0050D573 /* Measurement.swift */; };
 		3DEE8E202588C00600E346E5 /* TrendingCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE8E1F2588C00600E346E5 /* TrendingCellVM.swift */; };
 		4FA1F3CEBEB20FC06115099C /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D40E7DFE9DF6C45976EF88 /* Pods_MyApp.framework */; };
 		8300B34120C4D89200E49BC8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300B33E20C4D89200E49BC8 /* Category.swift */; };
@@ -181,6 +183,8 @@
 		3C207FF94A5422C9185174B7 /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3D2E3F2925889B44007EC7E3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		3D91A32E258B08A60050D573 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		3D91A340258B099B0050D573 /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
+		3D91A344258B0A0B0050D573 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		3DEE8E1F2588C00600E346E5 /* TrendingCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCellVM.swift; sourceTree = "<group>"; };
 		78D40E7DFE9DF6C45976EF88 /* Pods_MyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8300B33E20C4D89200E49BC8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -373,6 +377,14 @@
 				3D91A32E258B08A60050D573 /* TabbarViewController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		3D91A33F258B09870050D573 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D91A340258B099B0050D573 /* Radio.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8300B34820C4D90900E49BC8 /* Trending */ = {
@@ -878,6 +890,7 @@
 				83E0C4F320BA3B50009B03D1 /* String.swift */,
 				C44C83A520BF9D5F00EF422C /* Color.swift */,
 				C44C83A420BF9D5F00EF422C /* Font.swift */,
+				3D91A344258B0A0B0050D573 /* Measurement.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -915,6 +928,7 @@
 		C44C83A820BF9D9F00EF422C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3D91A33F258B09870050D573 /* Utils */,
 				C44C83A920BF9D9F00EF422C /* Ext */,
 			);
 			path = Library;
@@ -1175,7 +1189,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		EE21B5C9D9AFEDE1C7CC7552 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1225,6 +1240,7 @@
 				83E0C4EC20BA373F009B03D1 /* MenuViewModel.swift in Sources */,
 				C44C83AF20BF9D9F00EF422C /* DefaultsExt.swift in Sources */,
 				839F4BD120D1098D00E969FE /* Mapper.swift in Sources */,
+				3D91A341258B099B0050D573 /* Radio.swift in Sources */,
 				8325266D20E39BBE00CC7FEF /* BaseViewController.swift in Sources */,
 				83B1D70320E0E295006E23C8 /* AlbumHotViewModel.swift in Sources */,
 				8300B36B20C52BC500E49BC8 /* TopSongTableViewCell.swift in Sources */,
@@ -1301,6 +1317,7 @@
 				8367375F20D389F200C5A3CC /* EdmDanceViewModel.swift in Sources */,
 				8325266920E3883500CC7FEF /* MyAlbumCell.swift in Sources */,
 				83B42A1020C7CF2F00252332 /* ListCategorySongViewController.swift in Sources */,
+				3D91A345258B0A0B0050D573 /* Measurement.swift in Sources */,
 				83B1D6FF20E0C7E9006E23C8 /* AlbumHotListViewController.swift in Sources */,
 				83B42A0020C7C05900252332 /* ListSongDayViewController.swift in Sources */,
 				8300B37320C5359400E49BC8 /* SongEveryDayTableViewCell.swift in Sources */,
