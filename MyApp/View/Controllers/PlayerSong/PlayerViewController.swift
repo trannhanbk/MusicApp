@@ -12,9 +12,7 @@ import AVFoundation
 import SDWebImage
 import RealmSwift
 
-class ScreenPlayerSongViewController: UIViewController,
-                                      SPTAudioStreamingDelegate,
-                                      SPTAudioStreamingPlaybackDelegate {
+final class PlayerViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate {
 
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
@@ -31,7 +29,7 @@ class ScreenPlayerSongViewController: UIViewController,
     // Player
     var player: SPTAudioStreamingController?
     var loginUrl: URL?
-    var viewModel: PlayerSongViewModel?
+    var viewModel: PlayerViewModel?
     var isChangingProgress: Bool?
     var avAudio: AVAudioPlayer!
     var favorite = FavoriteSongViewModel()
@@ -43,8 +41,6 @@ class ScreenPlayerSongViewController: UIViewController,
         setUpScreen()
         updateView()
         updateAfterFirstLogin()
-        guard let viewModel = viewModel else { return }
-        position = viewModel.indexSelected
     }
 
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didChange metadata: SPTPlaybackMetadata!) {
@@ -52,12 +48,12 @@ class ScreenPlayerSongViewController: UIViewController,
     }
 
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didChangePosition position: TimeInterval) {
-        guard let progress = self.progressSlider else { return }
+        guard let progress = progressSlider else { return }
         guard let duration = player?.metadata.currentTrack?.duration else { return }
         progress.value = Float(position / duration)
-        convertTimingToText(duration, label: self.durationLabel)
-        convertTimingToText(position, label: self.runningTimeLable)
-        self.imageView.rotate()
+        convertTimingToText(duration, label: durationLabel)
+        convertTimingToText(position, label: runningTimeLable)
+        imageView.rotate()
     }
     // Play background:
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didChangePlaybackStatus isPlaying: Bool) {
@@ -130,6 +126,7 @@ class ScreenPlayerSongViewController: UIViewController,
             changeButtonImage(isPlaying)
         }
     }
+    
     @IBAction func backScreenButton(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -169,20 +166,21 @@ class ScreenPlayerSongViewController: UIViewController,
     }
 
     @IBAction func playButton(_ sender: Any) {
-        guard let isPlaying = player?.playbackState.isPlaying else { return }
-        self.actionPlaySong(!isPlaying)
+        if let isPlaying = player?.playbackState.isPlaying {
+            actionPlaySong(!isPlaying)
+        }
     }
 
     @IBAction func seekValueChanged(_ sender: Any) {
-        self.isChangingProgress = false
+        isChangingProgress = false
         guard let duration = player?.metadata.currentTrack?.duration else { return }
         let dest = Float(duration) * self.progressSlider.value
-        print(self.progressSlider.value)
-        self.player?.seek(to: TimeInterval(dest), callback: nil)
+        print(progressSlider.value)
+        player?.seek(to: TimeInterval(dest), callback: nil)
     }
 
     @IBAction func proggressTouchDown(_ sender: Any) {
-        self.isChangingProgress = true
+        isChangingProgress = true
     }
 
     @IBAction func addPlaylistAlbumButton(_ sender: Any) {
@@ -207,7 +205,7 @@ class ScreenPlayerSongViewController: UIViewController,
             }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 
     func addFavorite() {
@@ -225,7 +223,7 @@ class ScreenPlayerSongViewController: UIViewController,
             }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 
     func changeButtonImage(_ playing: Bool) {
@@ -233,10 +231,13 @@ class ScreenPlayerSongViewController: UIViewController,
     }
 
     private func updateView() {
-        nameSong.text = self.player?.metadata.currentTrack?.name
-        singerSong.text = self.player?.metadata.currentTrack?.artistName
-        if let urlThumb = self.player?.metadata.currentTrack?.albumCoverArtURL {
-//            imageView.sd_setImage(with: URL(string: urlThumb))
+        guard let viewModel = viewModel else { return }
+        position = viewModel.indexSelected
+        guard let player = player else { return }
+        nameSong.text = player.metadata.currentTrack?.name
+        singerSong.text = player.metadata.currentTrack?.artistName
+        if let urlThumb = player.metadata.currentTrack?.albumCoverArtURL {
+            imageView.sd_setImage(with: URL(string: urlThumb))
             imageBackgound.sd_setImage(with: URL(string: urlThumb))
         }
     }

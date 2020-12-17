@@ -21,10 +21,10 @@ class AlbumSongTableCellVM {
         return itemsAlbumHot.count
     }
 
-    func viewModelForPlaySongAlbumHot(at indexPath: IndexPath) -> PlayerSongViewModel {
+    func viewModelForPlaySongAlbumHot(at indexPath: IndexPath) -> PlayerViewModel {
         let uri = itemsAlbumHot[indexPath.row].uri
         guard let name = itemsAlbumHot[indexPath.row].name else { fatalError() }
         guard let imageURL = itemsAlbumHot[indexPath.row].image?.first?.url else { fatalError() }
-        return PlayerSongViewModel(dataPlays: [PlayerSongViewModel.DataPlays(albumName: name, uri: uri, name: name, image: imageURL)])
+        return PlayerViewModel(dataPlays: [PlayerViewModel.DataPlays(albumName: name, uri: uri, name: name, image: imageURL)])
     }
 }

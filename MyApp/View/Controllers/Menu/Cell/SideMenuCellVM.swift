@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SideMenuCellViewModel {
+class SideMenuCellVM {
     var title: String
     init(title: String) {
         self.title = title

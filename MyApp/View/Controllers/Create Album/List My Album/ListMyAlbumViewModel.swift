@@ -65,18 +65,18 @@ class ListMyAlbumViewModel {
         return ListMyCellVM(item: items[indexPath.row])
     }
 
-    func actionPlaySong() -> PlayerSongViewModel {
+    func actionPlaySong() -> PlayerViewModel {
         guard let name = name else { fatalError() }
-        return PlayerSongViewModel(dataPlays: [PlayerSongViewModel.DataPlays(albumName: name, uri: href ?? "", name: name, image: "")])
+        return PlayerViewModel(dataPlays: [PlayerViewModel.DataPlays(albumName: name, uri: href ?? "", name: name, image: "")])
     }
 
-    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = items.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: name ?? "",
+    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = items.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: name ?? "",
                                                  uri: item.uri,
                                                  name: item.name,
                                                  image: "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 }

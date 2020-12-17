@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FavoriteSongViewController: UIViewController {
+class FavoriteViewController: UIViewController {
     @IBOutlet weak var tableViewFavorite: UITableView!
     var viewModel = FavoriteSongViewModel()
     override func viewDidLoad() {
@@ -56,9 +56,9 @@ class FavoriteSongViewController: UIViewController {
     }
 }
 
-extension FavoriteSongViewController: UITableViewDelegate {
+extension FavoriteViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let player = ScreenPlayerSongViewController()
+        let player = PlayerViewController()
         player.viewModel = viewModel.viewModelForPlaySongAlbumNewReleases(at: indexPath)
         present(player, animated: true)
     }
@@ -68,13 +68,13 @@ extension FavoriteSongViewController: UITableViewDelegate {
     }
 }
 
-extension FavoriteSongViewController: UITableViewDataSource {
+extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableViewFavorite.dequeueReusableCell(withIdentifier: App.String.favoriteCell, for: indexPath) as? FavoriteTableViewCell else { fatalError() }
+        guard let cell = tableViewFavorite.dequeueReusableCell(withIdentifier: App.String.favoriteCell, for: indexPath) as? FavoriteCell else { fatalError() }
         do {
             let realm = try Realm()
             cell.updateCell(data: realm.objects(FavoriteSong.self)[indexPath.row + 1])

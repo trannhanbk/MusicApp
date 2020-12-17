@@ -54,13 +54,13 @@ final class SearchViewModel {
         return SearchSongCellVM(item: itemSerch[indexPath.row])
     }
 
-    func didSelectRowAtPlaySong(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = itemSerch.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: item.name ?? "",
+    func didSelectRowAtPlaySong(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = itemSerch.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: item.name ?? "",
                                                  uri: item.uri,
                                                  name: item.name ?? "",
                                                  image: item.album?.image.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 }

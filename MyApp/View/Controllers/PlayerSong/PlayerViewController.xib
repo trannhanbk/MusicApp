@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenPlayerSongViewController" customModule="MyApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerViewController" customModule="MyApp" customModuleProvider="target">
             <connections>
                 <outlet property="durationLabel" destination="UOK-FH-a3k" id="3aj-1b-Fde"/>
                 <outlet property="favoriteButton" destination="Jby-lH-yq5" id="qnd-VE-FpO"/>
@@ -24,20 +24,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUF-i7-GeE">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw1-qW-4aX">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5MK-DY-YQT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-AJ-aa4">
-                                <rect key="frame" x="20" y="427" width="335" height="35"/>
+                                <rect key="frame" x="20" y="578" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="UJZ-8K-AR2"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZl-71-jDs">
-                                <rect key="frame" x="20" y="472" width="335" height="35"/>
+                                <rect key="frame" x="20" y="623" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="c6J-Ll-YK6"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-DP-HAx" customClass="GradientView" customModule="MyApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="512" width="375" height="155"/>
+                                <rect key="frame" x="0.0" y="663" width="414" height="155"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -67,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-6x-YI9">
-                                <rect key="frame" x="147.5" y="567" width="80" height="80"/>
+                                <rect key="frame" x="167" y="718" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="VA5-ri-1Mb"/>
                                     <constraint firstAttribute="width" constant="80" id="aQT-ew-ciF"/>
@@ -78,14 +78,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-6A-W9n">
-                                <rect key="frame" x="47.5" y="582" width="50" height="50"/>
+                                <rect key="frame" x="67" y="733" width="50" height="50"/>
                                 <state key="normal" image="ic_shuffle_white_36dp"/>
                                 <connections>
                                     <action selector="shufflePlaySongButton:" destination="-1" eventType="touchUpInside" id="NvM-WR-3Sn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-sV-flA">
-                                <rect key="frame" x="227.5" y="582" width="50" height="50"/>
+                                <rect key="frame" x="247" y="733" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ER6-NY-xcC"/>
                                     <constraint firstAttribute="width" constant="50" id="e9s-Dd-o5s"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joB-Cy-nOf">
-                                <rect key="frame" x="97.5" y="582" width="50" height="50"/>
+                                <rect key="frame" x="117" y="733" width="50" height="50"/>
                                 <state key="normal" image="ic_skip_previous_white_36dp"/>
                                 <connections>
                                     <action selector="backButton:" destination="-1" eventType="touchUpInside" id="FEE-aX-dfY"/>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-rl-6w9">
-                                <rect key="frame" x="58" y="517" width="259" height="51"/>
+                                <rect key="frame" x="58" y="668" width="298" height="51"/>
                                 <color key="tintColor" red="1" green="0.28791462488057462" blue="0.2813318286805081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="k3K-uO-p7C"/>
@@ -126,7 +126,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxK-vc-IYT">
-                                <rect key="frame" x="3" y="534.5" width="54" height="15"/>
+                                <rect key="frame" x="3" y="685.66666666666663" width="54" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="UOM-Kc-UOK"/>
                                 </constraints>
@@ -135,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00: 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOK-FH-a3k">
-                                <rect key="frame" x="318" y="534.5" width="54" height="15"/>
+                                <rect key="frame" x="357" y="685.66666666666663" width="54" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Bxt-Eu-VKu"/>
                                 </constraints>
@@ -144,7 +144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRY-8M-c1g">
-                                <rect key="frame" x="330" y="25" width="25" height="25"/>
+                                <rect key="frame" x="369" y="25" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="id7-zD-qqw"/>
                                     <constraint firstAttribute="height" constant="25" id="scg-Zx-eQa"/>
@@ -155,14 +155,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-lH-yq5">
-                                <rect key="frame" x="277.5" y="582" width="50" height="50"/>
+                                <rect key="frame" x="297" y="733" width="50" height="50"/>
                                 <state key="normal" image="ic_favorite_white_48dp"/>
                                 <connections>
                                     <action selector="favoriteButton:" destination="-1" eventType="touchUpInside" id="v3t-rg-zvX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-cr-kEE">
-                                <rect key="frame" x="62.5" y="152" width="250" height="250"/>
+                                <rect key="frame" x="82" y="303" width="250" height="250"/>
                                 <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lw8-cr-kEE" secondAttribute="height" multiplier="1:1" id="BXE-dx-SfO"/>
@@ -221,18 +221,18 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Xw1-qW-4aX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="44H-T5-yJ1"/>
+                <constraint firstItem="Xw1-qW-4aX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="44H-T5-yJ1"/>
                 <constraint firstAttribute="trailing" secondItem="Xw1-qW-4aX" secondAttribute="trailing" id="OeH-8V-uoc"/>
                 <constraint firstItem="Xw1-qW-4aX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="PS8-jG-uuW"/>
                 <constraint firstItem="nUF-i7-GeE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="VvR-Tv-bGS"/>
                 <constraint firstItem="nUF-i7-GeE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="exO-8i-mfi"/>
                 <constraint firstItem="nUF-i7-GeE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="knA-dv-3ed"/>
                 <constraint firstItem="Xw1-qW-4aX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kzd-w1-23A"/>
-                <constraint firstItem="nUF-i7-GeE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sk3-si-upR"/>
+                <constraint firstItem="nUF-i7-GeE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sk3-si-upR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="90"/>
         </view>
     </objects>
@@ -240,7 +240,7 @@
         <image name="close" width="50" height="50"/>
         <image name="iTunesArtwork" width="512" height="512"/>
         <image name="ic_favorite_white_48dp" width="24" height="24"/>
-        <image name="ic_play" width="60" height="60"/>
+        <image name="ic_play" width="50" height="50"/>
         <image name="ic_shuffle_white_36dp" width="24" height="24"/>
         <image name="ic_skip_next_white_36dp" width="36" height="36"/>
         <image name="ic_skip_previous_white_36dp" width="36" height="36"/>

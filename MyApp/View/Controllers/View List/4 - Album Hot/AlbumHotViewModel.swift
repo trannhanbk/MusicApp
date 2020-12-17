@@ -68,23 +68,23 @@ class AlbumHotViewModel {
         return AlbumHotTableViewModel(tracks: items[indexPath.row])
     }
 
-    func actionPlaySong() -> PlayerSongViewModel {
-        let data = items.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: name ?? "",
+    func actionPlaySong() -> PlayerViewModel {
+        let data = items.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: name ?? "",
                                                  uri: item.tracks?.uri ?? "",
                                                  name: item.tracks?.name ?? "",
                                                  image: item.tracks?.album?.image.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 
-    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = items.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: name ?? "",
+    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = items.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: name ?? "",
                                                  uri: item.tracks?.uri ?? "",
                                                  name: item.tracks?.name ?? "",
                                                  image: item.tracks?.album?.image.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 }

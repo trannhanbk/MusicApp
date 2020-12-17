@@ -124,7 +124,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playSong = ScreenPlayerSongViewController()
+        let playSong = PlayerViewController()
         playSong.viewModel = viewModel.didSelectRowAtPlaySong(at: indexPath)
         playSong.viewModel?.indexSelected = indexPath.row
         present(playSong, animated: true)

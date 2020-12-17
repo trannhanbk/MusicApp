@@ -70,7 +70,7 @@ class ListCategoryItemViewController: UIViewController {
     }
 
     @IBAction func shufflePlayButton(_ sender: Any) {
-        let playSong = ScreenPlayerSongViewController()
+        let playSong = PlayerViewController()
         playSong.viewModel = viewModel?.actionPlaySong()
         present(playSong, animated: true)
     }
@@ -93,7 +93,7 @@ extension ListCategoryItemViewController: UITableViewDataSource {
 
 extension ListCategoryItemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playSong = ScreenPlayerSongViewController()
+        let playSong = PlayerViewController()
         playSong.viewModel = viewModel?.viewModelForPlaySong(at: indexPath)
         playSong.viewModel?.indexSelected = indexPath.row
         present(playSong, animated: true)

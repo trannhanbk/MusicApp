@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteTableViewCell: UITableViewCell {
+class FavoriteCell: UITableViewCell {
 
     @IBOutlet weak var imageSongFavorite: UIImageView!
     @IBOutlet weak var nameSong: UILabel!

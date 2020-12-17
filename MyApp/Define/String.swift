@@ -12,7 +12,7 @@ extension App {
         // Cell
         static let Home = "HOME"
         static let ErrorCell = "Error-Cell"
-        static let SideMenuTableCell = "SideMenuTableViewCell"
+        static let SideMenuTableCell = "SideMenuCell"
         static let screenSize = UIScreen.main.bounds.size
         static let nibName = "TrendingCell"
         static let identifier = "TrendingCell"
@@ -36,9 +36,9 @@ extension App {
         static let listCategorySong = "ListCategorySongCollectionCell"
         static let listCategoryItem = "ListCategorySongTableCell"
         static let categoryCell = "CategorySongTableCell"
-        static let favoriteCell = "FavoriteTableViewCell"
+        static let favoriteCell = "FavoriteCell"
         static let albumHotCell = "SongAlbumHotViewCell"
-        static let myAlbumCell = "MyAlbumTableViewCell"
+        static let myAlbumCell = "MyAlbumCell"
         static let listMyAlbum = "ListMyAlbumTableViewCell"
         static let headerSuggestCell = "HeaderSuggestTableCell"
     }

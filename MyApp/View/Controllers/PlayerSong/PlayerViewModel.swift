@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class PlayerSongViewModel {
+class PlayerViewModel {
     var dataPlays: [DataPlays] = []
 
     init(dataPlays: [DataPlays] = []) {

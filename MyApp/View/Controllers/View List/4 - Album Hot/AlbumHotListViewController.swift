@@ -60,7 +60,7 @@ class AlbumHotListViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     @IBAction func playButton(_ sender: Any) {
-        let navi = ScreenPlayerSongViewController()
+        let navi = PlayerViewController()
         navi.viewModel = viewModel?.actionPlaySong()
         present(navi, animated: true)
     }
@@ -82,7 +82,7 @@ extension AlbumHotListViewController: UITableViewDataSource {
 
 extension AlbumHotListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let navi = ScreenPlayerSongViewController()
+        let navi = PlayerViewController()
         navi.viewModel = viewModel?.viewModelForPlaySong(at: indexPath)
         navi.viewModel?.indexSelected = indexPath.row
         present(navi, animated: true)

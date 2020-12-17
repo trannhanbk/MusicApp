@@ -9,10 +9,12 @@
 import UIKit
 import RealmSwift
 
-class CreateAlbumViewController: UIViewController, UITextFieldDelegate {
+final class CreateAlbumViewController: UIViewController, UITextFieldDelegate {
+
     @IBOutlet weak var tableViewMyAlbum: UITableView!
+    
     var alertController: UIAlertController?
-    var viewModel = MyAlbumViewModel()
+    var viewModel = CreateAlbumViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,13 +77,14 @@ class CreateAlbumViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension CreateAlbumViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableViewMyAlbum.dequeueReusableCell(withIdentifier: App.String.myAlbumCell, for: indexPath) as? MyAlbumTableViewCell else { fatalError() }
+        guard let cell = tableViewMyAlbum.dequeueReusableCell(withIdentifier: App.String.myAlbumCell, for: indexPath) as? MyAlbumCell else { fatalError() }
         do {
             let realm = try Realm()
             cell.updateCell(data: realm.objects(MyAlbum.self)[indexPath.row + 1])
@@ -98,6 +101,7 @@ extension CreateAlbumViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension CreateAlbumViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let navi = ListMyAlbumViewController()

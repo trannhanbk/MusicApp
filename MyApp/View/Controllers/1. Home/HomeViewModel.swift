@@ -161,11 +161,11 @@ class HomeViewModel {
         return SongEveryDayCellViewModel(item: items[indexPath.row])
     }
 
-    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerSongViewModel {
+    func viewModelForPlaySong(at indexPath: IndexPath) -> PlayerViewModel {
         let uri = items[indexPath.row].uri
         let name = items[indexPath.row].name ?? ""
         let imageURL = items[indexPath.row].image?.first?.url ?? ""
-        return PlayerSongViewModel(dataPlays: [PlayerSongViewModel.DataPlays(albumName: name, uri: uri, name: name, image: imageURL)])
+        return PlayerViewModel(dataPlays: [PlayerViewModel.DataPlays(albumName: name, uri: uri, name: name, image: imageURL)])
     }
 
     func linkTrackHref(at indexPath: IndexPath) -> ListSongDayViewModel {
@@ -203,14 +203,14 @@ class HomeViewModel {
         return TopSongCellViewModel(item: itemsAlbum[indexPath.row])
     }
 
-    func viewModelForPlaySongAlbumNewReleases(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = itemsAlbum.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: item.name,
+    func viewModelForPlaySongAlbumNewReleases(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = itemsAlbum.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: item.name,
                                                  uri: item.uri,
                                                  name: item.artist.first?.name ?? "",
                                                  image: item.image?.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 
 // Album Hot
@@ -289,14 +289,14 @@ class HomeViewModel {
         return LikeSongViewModel(item: itemsLikeSong[indexPath.row])
     }
 
-    func viewModelForPlayLikeSong(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = itemsLikeSong.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: item.name ?? "",
+    func viewModelForPlayLikeSong(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = itemsLikeSong.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: item.name ?? "",
                                                  uri: item.uri,
                                                  name: item.name ?? "",
                                                  image: item.image?.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 
 // Category Song

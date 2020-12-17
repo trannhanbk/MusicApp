@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MyAlbumTableViewCell: UITableViewCell {
+class MyAlbumCell: UITableViewCell {
 
     @IBOutlet weak var imageAlbum: UIImageView!
     @IBOutlet weak var nameAlbum: UILabel!
     @IBOutlet weak var numberOfSong: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

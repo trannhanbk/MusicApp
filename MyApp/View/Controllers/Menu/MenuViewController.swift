@@ -12,7 +12,7 @@ import LGSideMenuController
 class MenuViewController: UIViewController {
 
     @IBOutlet fileprivate weak var tableView: UITableView!
-    var viewModel = SideMenuViewModel()
+    var viewModel = MenuViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ extension MenuViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: App.String.SideMenuTableCell, for: indexPath) as? SideMenuTableViewCell else { fatalError(App.String.ErrorCell) }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: App.String.SideMenuTableCell, for: indexPath) as? SideMenuCell else { fatalError(App.String.ErrorCell) }
         cell.viewModel = viewModel.cellForRowAtSideMenu(at: indexPath)
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .gray
@@ -50,11 +50,11 @@ extension MenuViewController: UITableViewDataSource {
 
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = SideMenuViewModel.Row(rawValue: indexPath.row) {
+        if let item = MenuViewModel.Row(rawValue: indexPath.row) {
             switch item {
             case .home: break
             case .favoriteList:
-                let favorite = FavoriteSongViewController()
+                let favorite = FavoriteViewController()
                 self.changeViewSideMenu(vc: favorite)
             case .createAlbum:
                 let album = CreateAlbumViewController()

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class MyAlbumViewModel {
+class CreateAlbumViewModel {
     let item = List<MyAlbum>()
 
     func numberOfRowsInSection() -> Int {
@@ -23,8 +23,8 @@ class MyAlbumViewModel {
         return count
     }
 
-    func cellForRowAtListMyAlbum(at indexPath: IndexPath) -> MyAlbumCellViewModel {
-        return MyAlbumCellViewModel(item: item[indexPath.row])
+    func cellForRowAtListMyAlbum(at indexPath: IndexPath) -> MyAlbumCellVM {
+        return MyAlbumCellVM(item: item[indexPath.row])
     }
 
     func editingStyle(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

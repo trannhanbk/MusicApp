@@ -58,7 +58,7 @@ class ListSongDayViewController: UIViewController {
     }
 
     @IBAction func playSongButton(_ sender: Any) {
-        let playSong = ScreenPlayerSongViewController()
+        let playSong = PlayerViewController()
         playSong.viewModel = viewModel?.actionPlaySong()
         present(playSong, animated: true)
     }
@@ -86,7 +86,7 @@ extension ListSongDayViewController: UITableViewDataSource {
 
 extension ListSongDayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let navi = ScreenPlayerSongViewController()
+        let navi = PlayerViewController()
         navi.viewModel = viewModel?.viewModelForPlaySong(at: indexPath)
         navi.viewModel?.indexSelected = indexPath.row
         present(navi, animated: true)

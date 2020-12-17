@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct MyAlbumCellViewModel {
+struct MyAlbumCellVM {
     var item: MyAlbum
 }

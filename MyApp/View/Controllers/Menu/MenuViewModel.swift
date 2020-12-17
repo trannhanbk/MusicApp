@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class SideMenuViewModel {
+class MenuViewModel {
     enum Section: Int {
         case home
 
@@ -58,11 +58,11 @@ class SideMenuViewModel {
         return 1
     }
 
-    func cellForRowAtSideMenu(at indexPath: IndexPath) -> SideMenuCellViewModel {
+    func cellForRowAtSideMenu(at indexPath: IndexPath) -> SideMenuCellVM {
         if let item = Section(rawValue: indexPath.section), item.items.count > indexPath.row {
             let title = item.items[indexPath.row].title
-            return SideMenuCellViewModel(title: title)
+            return SideMenuCellVM(title: title)
         }
-        return SideMenuCellViewModel(title: "")
+        return SideMenuCellVM(title: "")
     }
 }

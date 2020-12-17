@@ -42,18 +42,18 @@ final class FavoriteSongViewModel: Object {
         }
     }
 
-    func viewModelForPlaySongAlbumNewReleases(at indexPath: IndexPath) -> PlayerSongViewModel {
+    func viewModelForPlaySongAlbumNewReleases(at indexPath: IndexPath) -> PlayerViewModel {
         do {
             let realm = try Realm()
             let itemFavotite = realm.objects(FavoriteSong.self)[indexPath.row + 1]
             let uri = itemFavotite.uri ?? ""
             let image = itemFavotite.image ?? ""
             let name = itemFavotite.name ?? ""
-            return PlayerSongViewModel(dataPlays: [PlayerSongViewModel.DataPlays(albumName: name, uri: uri, name: name, image: image)])
+            return PlayerViewModel(dataPlays: [PlayerViewModel.DataPlays(albumName: name, uri: uri, name: name, image: image)])
         } catch {
             print("Error-------------------------")
         }
-        return PlayerSongViewModel(dataPlays: [PlayerSongViewModel.DataPlays(albumName: "", uri: "", name: "", image: "")])
+        return PlayerViewModel(dataPlays: [PlayerViewModel.DataPlays(albumName: "", uri: "", name: "", image: "")])
     }
 
 }

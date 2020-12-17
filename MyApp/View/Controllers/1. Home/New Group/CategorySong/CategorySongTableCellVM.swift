@@ -52,14 +52,14 @@ class CategorySongTableCellVM {
         return CategoryCollectionViewModel(item: itemsCategory[indexPath.row])
     }
 
-    func viewModelForPlayCategorySong(at indexPath: IndexPath) -> PlayerSongViewModel {
-        let data = itemsCategory.map { (item) -> PlayerSongViewModel.DataPlays in
-            return PlayerSongViewModel.DataPlays(albumName: item.name ?? "",
+    func viewModelForPlayCategorySong(at indexPath: IndexPath) -> PlayerViewModel {
+        let data = itemsCategory.map { (item) -> PlayerViewModel.DataPlays in
+            return PlayerViewModel.DataPlays(albumName: item.name ?? "",
                                                  uri: item.uri,
                                                  name: item.name ?? "",
                                                  image: item.image?.first?.url ?? "")
         }
-        return PlayerSongViewModel(dataPlays: data)
+        return PlayerViewModel(dataPlays: data)
     }
 
 }

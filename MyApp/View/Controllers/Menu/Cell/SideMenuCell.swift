@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SideMenuTableViewCell: UITableViewCell {
+class SideMenuCell: UITableViewCell {
 
     @IBOutlet fileprivate weak var titleLabel: UILabel!
     // MARK: - Properties
-    var viewModel: SideMenuCellViewModel? {
+    var viewModel: SideMenuCellVM? {
         didSet {
             updateView()
         }

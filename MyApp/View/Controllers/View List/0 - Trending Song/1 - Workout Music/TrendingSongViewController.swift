@@ -75,7 +75,7 @@ class TrendingSongViewController: UIViewController {
 
 extension TrendingSongViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let navi = ScreenPlayerSongViewController()
+        let navi = PlayerViewController()
         navi.viewModel = viewModel.viewModelForPlaySong(at: indexPath)
         navi.viewModel?.indexSelected = indexPath.row
         present(navi, animated: true)

@@ -334,12 +334,12 @@ extension HomeViewController: UITableViewDelegate {
                 navi.viewModel = viewModel.linkTrackHref(at: indexPath)
                 navigationController?.pushViewController(navi, animated: true)
             case .topSong:
-                let navi = ScreenPlayerSongViewController()
+                let navi = PlayerViewController()
                 navi.viewModel = viewModel.viewModelForPlaySongAlbumNewReleases(at: indexPath)
                 navi.viewModel?.indexSelected = indexPath.row
                 present(navi, animated: true)
             case .youCanLike:
-                let navi = ScreenPlayerSongViewController()
+                let navi = PlayerViewController()
                 navi.viewModel = viewModel.viewModelForPlayLikeSong(at: indexPath)
                 present(navi, animated: true)
             case .categorySong:
